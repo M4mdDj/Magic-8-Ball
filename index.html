@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(156, 0, 156);
+        }
+        button{
+            border-radius: 20%;
+            padding: 10px;
+            font-size: large;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(49, 49, 214);
+            border-color: grey;
+        }
+        .container{
+            text-align: center;
+        }
+        .title{
+            font-size: x-large;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 20%;
+            padding: 20px;
+            font-weight: bold;
+
+
+        }
+        .Reply{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 20%;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Magic 8 Ball </div>
+        <div id="Reply" class="Reply"></div>
+        <button onclick="chooseRandomSentence()">Shake</button>
+    </div>
+
+
+    <script>
+        function chooseRandomSentence() {
+            const replies = [
+                "Outlook hazy, try again later.",
+                "Signs point to yes.",
+                "Ask again after your next coffee break.",
+                "Reply hazy, ask your cat for guidance.",
+                "Definitely maybe.",
+                "The stars are whispering 'perhaps.'",
+                "In the quantum realm, all answers exist.",
+                "Seek wisdom from a fortune cookie.",
+                "Ask your neighbor's parrot.",
+                "The cosmic sloth nods in agreement.",
+                "Outlook as clear as a foggy mirror.",
+                "The moon winks, but won't commit.",
+                "Ask your favorite houseplant.",
+                "The answer lies in a parallel universe.",
+                "Consult your inner sock drawer.",
+                "The mystical squirrel says 'nuts to that.'",
+                "The 8-ball is on vacation. Try again later.",
+                "The answer is written in invisible ink.",
+                "Ask your WiFi router for enlightenment.",
+                "The cosmic jellyfish giggles mysteriously.",
+                "The answer is blowing in the wind.",
+                "The 8-ball is binge-watching Netflix.",
+                "The quantum butterfly flaps its wings.",
+                "Ask your reflection in a spoon.",
+                "The answer is encrypted in moonbeams.",
+                "The cosmic llama shrugs noncommittally.",
+                "The 8-ball is meditating. Shhh.",
+                "The answer is lost in a black hole.",
+                "Ask your favorite constellation.",
+                "The cosmic pizza slice says 'extra cheese.'"
+                // ... (your list of sentences)
+            ];
+            const randomIndex = Math.floor(Math.random() * replies.length);
+            const selectedSentence = replies[randomIndex];
+            document.getElementById("Reply").innerHTML = selectedSentence;
+        }
+    </script>
+</body>
+
+</html>
